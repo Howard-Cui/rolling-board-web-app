@@ -1,0 +1,5 @@
+import { twMerge } from "tailwind-merge";
+import { clsx } from "clsx";
+
+export const mergeTwClasses = (...classes: string[]): string =>
+  twMerge(clsx(classes));
