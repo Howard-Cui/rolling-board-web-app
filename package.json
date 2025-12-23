@@ -6,11 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint",
     "format": "prettier --write .",
     "prepare": "husky",
-    "pre-commit": "npm run lint && npm run format"
+    "pre-commit": "npx lint-staged --config lint-staged.config.js"
   },
   "dependencies": {
     "next": "16.1.1",
@@ -24,6 +23,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.1",
+    "lint-staged": "^16.2.7",
     "prettier": "3.7.4",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4",
