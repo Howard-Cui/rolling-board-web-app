@@ -3,6 +3,7 @@ import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import { NextIntlClientProvider } from "next-intl";
+import Footer from "@/components/footer";
 
 const openSans = Open_Sans({
   weight: ["400", "600", "700"],
@@ -24,7 +25,8 @@ export default function RootLayout({
       <body className={`${openSans.className} antialiased`}>
         <NextIntlClientProvider>
           <Header />
-          <main>{children}</main>
+          <main className="w-full flex flex-col items-center">{children}</main>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

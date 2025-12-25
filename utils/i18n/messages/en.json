@@ -7,5 +7,12 @@
   "buttons": {
     "signIn": "Sign In",
     "signUp": "Sign Up"
-  }
+  },
+  "hero": {
+    "projectManagementApp": "Project Management App",
+    "colaborateAndBuildFasterTogether": "Colaborate and build faster, together",
+    "createShareAndGetFeedbackWithCollaborativeBoardsForRapidDevelopment": "Create, share, and get feedback with collaborative boards for rapid development.",
+    "createKanbanBoard": "Create kanban board"
+  },
+  "copyright": "Copyright © 2025 The Rolling Board. All rights reserved."
 }
