@@ -1,8 +1,9 @@
-import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
 
-const nextConfig: NextConfig = {
-  /* config options here */
-  webpack: (config) => {
+const withNextIntl = createNextIntlPlugin("./utils/i18n/index.ts");
+
+const nextConfig = withNextIntl({
+  webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>
       rule.test?.test?.(".svg"),
@@ -29,6 +30,6 @@ const nextConfig: NextConfig = {
 
     return config;
   },
-};
+});
 
 export default nextConfig;

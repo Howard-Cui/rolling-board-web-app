@@ -1,0 +1,11 @@
+{
+  "appname": "The Rolling Board",
+  "navigations": {
+    "home": "Home",
+    "about": "About"
+  },
+  "buttons": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up"
+  }
+}
