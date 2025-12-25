@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header";
 import { NextIntlClientProvider } from "next-intl";
 
 const openSans = Open_Sans({
@@ -22,6 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${openSans.className} antialiased`}>
         <NextIntlClientProvider>
+          <Header />
           <main>{children}</main>
         </NextIntlClientProvider>
       </body>
