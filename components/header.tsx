@@ -8,9 +8,11 @@ import { Button } from "./shared/button";
 import BurgerMenuIcon from "@/public/svgs/burger-menu.svg";
 import SideDrawer from "./shared/drawer";
 import BlockIcon from "@/public/svgs/block.svg";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
   const t = useTranslations();
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const navigationLinks = useMemo(
     () => [
@@ -46,8 +48,12 @@ const Header = () => {
         </ul>
 
         <div className="flex gap-4">
-          <Button variant="ghost">{t("buttons.signIn")}</Button>
-          <Button variant="outline">{t("buttons.signUp")}</Button>
+          <Button variant="ghost" onClick={() => router.push("/auth/login")}>
+            {t("buttons.signIn")}
+          </Button>
+          <Button variant="outline" onClick={() => router.push("/auth/signup")}>
+            {t("buttons.signUp")}
+          </Button>
         </div>
       </div>
       <div className="md:hidden flex justify-between items-center py-2 px-2 flex-1">

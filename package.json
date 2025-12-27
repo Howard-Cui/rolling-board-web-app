@@ -13,13 +13,17 @@
     "pre-commit": "npx lint-staged --config lint-staged.config.js && npm run type-check"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "aws-amplify": "^6.15.9",
     "clsx": "^2.1.1",
     "next": "16.1.1",
     "next-intl": "^4.6.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "react-hook-form": "^7.69.0",
     "tailwind-merge": "^3.4.0",
-    "vaul": "^1.1.2"
+    "vaul": "^1.1.2",
+    "zod": "^4.2.1"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",

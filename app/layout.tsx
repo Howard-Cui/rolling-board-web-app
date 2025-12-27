@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header";
 import { NextIntlClientProvider } from "next-intl";
-import Footer from "@/components/footer";
+import AwsAmpliferProvider from "@/components/providers/awsAmplifyProvider";
 
 const openSans = Open_Sans({
   weight: ["400", "600", "700"],
@@ -23,11 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${openSans.className} antialiased`}>
-        <NextIntlClientProvider>
-          <Header />
-          <main className="w-full flex flex-col items-center">{children}</main>
-          <Footer />
-        </NextIntlClientProvider>
+        <AwsAmpliferProvider />
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
   );

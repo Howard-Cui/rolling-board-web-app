@@ -71,5 +71,36 @@
     },
     "builtWith": "Built with"
   },
+  "signup": {
+    "appLabel": "Project Management App",
+    "title": "Everything you need in one place",
+    "description": "Manage your boards using Drag-n-Drop, create additional boards and tasks.",
+    "form": {
+      "title": "Sign up",
+      "name": "Name",
+      "email": "Email",
+      "login": "Login",
+      "password": "Password",
+      "alreadyHaveAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "createAccount": "Create an Account"
+    },
+    "otpForm": {
+      "title": "Confirm Sign up",
+      "otpLabel": "One time password",
+      "otpPlaceholder": "Enter one time password",
+      "alreadyHaveAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "confirmButton": "Confirm Sign Up"
+    }
+  },
+  "login": {
+    "title": "Login",
+    "email": "Email",
+    "password": "Password",
+    "alreadyHaveAccount": "Already have an account?",
+    "signIn": "Sign in",
+    "createAccount": "Create an Account"
+  },
   "copyright": "Copyright © 2025 The Rolling Board. All rights reserved."
 }
