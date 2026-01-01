@@ -2,11 +2,14 @@
   "appname": "The Rolling Board",
   "navigations": {
     "home": "Home",
-    "about": "About"
+    "about": "About",
+    "profiles": "Profiles",
+    "projects": "Projects"
   },
   "buttons": {
     "signIn": "Sign In",
-    "signUp": "Sign Up"
+    "signUp": "Sign Up",
+    "signOut": "Sign Out"
   },
   "hero": {
     "projectManagementApp": "Project Management App",

@@ -10,6 +10,7 @@ export const getCommonHeaders = async () => {
   const session = await fetchAuthSession();
 
   const idToken = session.tokens?.idToken;
+
   if (!idToken) {
     throw new Error("No ID token found");
   }

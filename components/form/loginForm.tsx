@@ -7,6 +7,10 @@ import Link from "next/link";
 import { Button } from "../shared/button";
 import { signIn } from "@/services/auth";
 import { UseFormReturn } from "react-hook-form";
+import Bugsnag from "@bugsnag/js";
+import useUsersStore from "@/stores/users";
+import { fetchCurrentUser } from "@/services/users";
+import { autoSignIn } from "aws-amplify/auth";
 
 // Zod schema for login validation
 export const loginSchema = z.object({
@@ -37,11 +41,15 @@ const LoginForm = ({ form, onSuccess }: LoginFormProps) => {
     setError,
     clearErrors,
   } = form;
+  const { setUser } = useUsersStore();
 
   const onSubmit = async (data: LoginFormData) => {
     try {
       clearErrors("root");
       await signIn(data.email, data.password);
+      await autoSignIn();
+      const user = await fetchCurrentUser();
+      setUser(user);
       onSuccess?.();
     } catch (error) {
       const message =
@@ -50,6 +58,7 @@ const LoginForm = ({ form, onSuccess }: LoginFormProps) => {
           : "Unable to sign in. Please try again.";
       setError("root", { type: "server", message });
       // TODO: Bugsnag notify error
+      Bugsnag.notify(error as Error);
       console.error(error);
     }
   };

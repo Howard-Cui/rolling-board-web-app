@@ -8,6 +8,9 @@ import Input from "../shared/input";
 import Link from "next/link";
 import { Button } from "../shared/button";
 import { verifySignUp } from "@/services/auth";
+import { fetchCurrentUser } from "@/services/users";
+import { autoSignIn } from "aws-amplify/auth";
+import useUsersStore from "@/stores/users";
 
 // Zod schema for form validation
 const otpSchema = z.object({
@@ -26,6 +29,7 @@ type OTPFormProps = {
 
 const OTPForm = ({ userId, onSuccess }: OTPFormProps) => {
   const t = useTranslations();
+  const { setUser } = useUsersStore();
   const {
     register,
     handleSubmit,
@@ -37,6 +41,8 @@ const OTPForm = ({ userId, onSuccess }: OTPFormProps) => {
   const onSubmit = async (data: OTPFormData) => {
     try {
       await verifySignUp(userId, data.otp);
+      await autoSignIn();
+      setUser(await fetchCurrentUser());
       onSuccess?.();
     } catch (error) {
       // TODO: Bugsnag notify error
