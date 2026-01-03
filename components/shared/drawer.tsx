@@ -20,7 +20,7 @@ const SideDrawer = ({
       <Drawer.Trigger>{trigger}</Drawer.Trigger>
       <Drawer.Portal>
         <Drawer.Overlay className="absolute left-0 top-0 w-full h-screen bg-black/40" />
-        <Drawer.Content className="bg-gray-100 absolute top-0 right-0 h-screen outline-none rounded-2xl overflow-hidden">
+        <Drawer.Content className="bg-dark-9 absolute top-0 right-0 h-screen outline-none rounded-2xl overflow-hidden">
           {children}
         </Drawer.Content>
       </Drawer.Portal>

@@ -12,13 +12,15 @@ import { useRouter } from "next/navigation";
 import { signOut } from "aws-amplify/auth";
 import useUsersStore from "@/stores/users";
 import { fetchCurrentUser } from "@/services/users";
+import SideDrawerContent from "./sideDrawerContent";
+import UpdateProfileDialog from "./updateProfileDialog";
 
 const Header = () => {
   const t = useTranslations();
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+  const [isProfileDrawerOpen, setIsProfileDrawerOpen] = useState(false);
   const { user, setUser } = useUsersStore();
-
   useEffect(() => {
     fetchCurrentUser().then(setUser);
   }, [setUser]);
@@ -40,6 +42,7 @@ const Header = () => {
             {
               label: t("navigations.profiles"),
               href: "#",
+              openDrawer: true,
             },
             {
               label: t("navigations.projects"),
@@ -75,9 +78,21 @@ const Header = () => {
         <ul className="flex items-center gap-10">
           {navigationLinks.map((link) => (
             <li key={`${link.href}-${link.label}`}>
-              <Link href={link.href} className={navigationLinksClasses}>
-                {link.label}
-              </Link>
+              {link.openDrawer ? (
+                <SideDrawer
+                  isOpen={isProfileDrawerOpen}
+                  setIsOpen={setIsProfileDrawerOpen}
+                  trigger={
+                    <p className={navigationLinksClasses}> {link.label}</p>
+                  }
+                >
+                  <SideDrawerContent />
+                </SideDrawer>
+              ) : (
+                <Link href={link.href} className={navigationLinksClasses}>
+                  {link.label}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
@@ -141,6 +156,7 @@ const Header = () => {
             </ul>
           </div>
         </SideDrawer>
+        <UpdateProfileDialog />
       </div>
     </header>
   );

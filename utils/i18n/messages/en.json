@@ -105,5 +105,13 @@
     "signIn": "Sign in",
     "createAccount": "Create an Account"
   },
+  "sideDrawer": {
+    "editProfile": "Edit Profile",
+    "id": "ID: {id}"
+  },
+  "editProfile": {
+    "title": "Edit Profile",
+    "save": "Save"
+  },
   "copyright": "Copyright © 2025 The Rolling Board. All rights reserved."
 }
