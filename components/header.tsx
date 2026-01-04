@@ -46,7 +46,7 @@ const Header = () => {
             },
             {
               label: t("navigations.projects"),
-              href: "#",
+              href: "/app",
             },
             {
               label: t("navigations.about"),

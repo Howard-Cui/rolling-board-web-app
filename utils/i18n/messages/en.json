@@ -113,5 +113,43 @@
     "title": "Edit Profile",
     "save": "Save"
   },
+  "projectsScreen": {
+    "projects": "Projects",
+    "edit": "Edit",
+    "open": "Open Board",
+    "newProject": "New Project",
+    "createProject": "Create Project",
+    "editProject": "Edit Project",
+    "createProjectButton": "Create",
+    "editProjectButton": "Save",
+    "name": "Name",
+    "description": "Description"
+  },
+  "viewMembersDialog": {
+    "title": "Project members",
+    "view": "View",
+    "name": "Name",
+    "email": "Email",
+    "close": "Close",
+    "noMembers": "No members yet",
+    "remove": "Remove",
+    "actions": "Actions"
+  },
+  "addMembersDialog": {
+    "title": "Add members to project",
+    "add": "Add",
+    "searchPlaceholder": "Search users by name or email",
+    "addSelected": "Add selected",
+    "cancel": "Cancel",
+    "noUsersFound": "No users found",
+    "name": "Name",
+    "email": "Email",
+    "status": "Status",
+    "member": "Member",
+    "notMember": "Not member"
+  },
+  "projectDetail": {
+    "members": "Members"
+  },
   "copyright": "Copyright © 2025 The Rolling Board. All rights reserved."
 }

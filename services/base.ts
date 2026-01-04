@@ -21,11 +21,20 @@ export const getCommonHeaders = async () => {
   };
 };
 
-export const handleApiResponse = async <T>(response: Response): Promise<T> => {
+export const handleApiResponse = async <T>(
+  response: Response,
+): Promise<T | null> => {
   if (!response.ok) {
+    console.log("response", response);
     const error = await response.json();
     throw new ApiError(error.message);
   }
 
-  return await response.json();
+  const responseText = await response.text();
+
+  if (!responseText) {
+    return null;
+  }
+
+  return JSON.parse(responseText);
 };
