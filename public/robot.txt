@@ -1,0 +1,5 @@
+user-agent: *
+Allow: /
+Disallow: /app
+
+Sitemap: https://www.the-rolling-boarding-app.com.au/sitemap.xml

@@ -13,11 +13,28 @@
     "pre-commit": "npx lint-staged --config lint-staged.config.js && npm run type-check"
   },
   "dependencies": {
+    "@bugsnag/browser-performance": "^3.2.0",
+    "@bugsnag/js": "^8.6.0",
+    "@bugsnag/plugin-react": "^8.6.0",
+    "@headlessui/react": "^2.2.9",
+    "@heroui/pagination": "^2.2.26",
+    "@heroui/system": "^2.4.25",
+    "@heroui/table": "^2.2.29",
+    "@heroui/theme": "^2.4.25",
+    "@hookform/resolvers": "^5.2.2",
+    "aws-amplify": "^6.15.9",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.23.26",
+    "immer": "^11.1.0",
     "next": "16.1.1",
+    "next-intl": "^4.6.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "tailwind-merge": "^3.4.0"
+    "react-hook-form": "^7.69.0",
+    "tailwind-merge": "^3.4.0",
+    "vaul": "^1.1.2",
+    "zod": "^4.2.1",
+    "zustand": "^5.0.9"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",

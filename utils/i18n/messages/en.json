@@ -1,0 +1,155 @@
+{
+  "appname": "The Rolling Board",
+  "navigations": {
+    "home": "Home",
+    "about": "About",
+    "profiles": "Profiles",
+    "projects": "Projects"
+  },
+  "buttons": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "signOut": "Sign Out"
+  },
+  "hero": {
+    "projectManagementApp": "Project Management App",
+    "colaborateAndBuildFasterTogether": "Colaborate and build faster, together",
+    "createShareAndGetFeedbackWithCollaborativeBoardsForRapidDevelopment": "Create, share, and get feedback with collaborative boards for rapid development.",
+    "createKanbanBoard": "Create kanban board"
+  },
+  "productDescriptions": {
+    "universal": {
+      "flag": "Universal",
+      "title": "Build the workflow you want",
+      "description": "Manage your boards using Drag-n-Drop, create additional boards and tasks."
+    },
+    "optimized": {
+      "flag": "Optimized",
+      "title": "Everything you need in one place",
+      "description": "You can specify additional info in task description and assign users."
+    },
+    "unlimited": {
+      "flag": "Unlimited",
+      "title": "No limits for all users.",
+      "description": "Unlimited kanban boards, columns and tasks."
+    }
+  },
+  "featureDescriptions": {
+    "integrate": {
+      "title": "Integrate",
+      "description": "The ability to quickly set up and customize workflows for just about anything."
+    },
+    "collaborate": {
+      "title": "Colaborate",
+      "description": "Manage projects, organize tasks, and build team spirit—all in one place."
+    },
+    "succeed": {
+      "title": "Succeed",
+      "description": "Every single part of your task can be managed, tracked, and shared with teammates."
+    }
+  },
+
+  "aboutScreen": {
+    "title": "About Project",
+    "tags": {
+      "design": "Design",
+      "api": "API",
+      "features": "Features",
+      "router": "Router",
+      "markUp": "MarkUp"
+    },
+    "aboutProjectInfo": {
+      "alex": {
+        "name": "Alex",
+        "description": "Made design, api requests, statistics, sprint game, made some typesetting and supervised the development."
+      },
+      "gabriel": {
+        "name": "Gabriel",
+        "description": "Authorization / registration module, \"Audio call\" game, statistics collection, routing, typing of studied words."
+      },
+      "marcus": {
+        "name": "Marcus",
+        "description": "Made the main page of the application, an electronic textbook, layout and adaptive."
+      }
+    },
+    "builtWith": "Built with"
+  },
+  "signup": {
+    "appLabel": "Project Management App",
+    "title": "Everything you need in one place",
+    "description": "Manage your boards using Drag-n-Drop, create additional boards and tasks.",
+    "form": {
+      "title": "Sign up",
+      "name": "Name",
+      "email": "Email",
+      "login": "Login",
+      "password": "Password",
+      "alreadyHaveAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "createAccount": "Create an Account"
+    },
+    "otpForm": {
+      "title": "Confirm Sign up",
+      "otpLabel": "One time password",
+      "otpPlaceholder": "Enter one time password",
+      "alreadyHaveAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "confirmButton": "Confirm Sign Up"
+    }
+  },
+  "login": {
+    "title": "Login",
+    "email": "Email",
+    "password": "Password",
+    "alreadyHaveAccount": "Already have an account?",
+    "signIn": "Sign in",
+    "createAccount": "Create an Account"
+  },
+  "sideDrawer": {
+    "editProfile": "Edit Profile",
+    "id": "ID: {id}"
+  },
+  "editProfile": {
+    "title": "Edit Profile",
+    "save": "Save"
+  },
+  "projectsScreen": {
+    "projects": "Projects",
+    "edit": "Edit",
+    "open": "Open Board",
+    "newProject": "New Project",
+    "createProject": "Create Project",
+    "editProject": "Edit Project",
+    "createProjectButton": "Create",
+    "editProjectButton": "Save",
+    "name": "Name",
+    "description": "Description"
+  },
+  "viewMembersDialog": {
+    "title": "Project members",
+    "view": "View",
+    "name": "Name",
+    "email": "Email",
+    "close": "Close",
+    "noMembers": "No members yet",
+    "remove": "Remove",
+    "actions": "Actions"
+  },
+  "addMembersDialog": {
+    "title": "Add members to project",
+    "add": "Add",
+    "searchPlaceholder": "Search users by name or email",
+    "addSelected": "Add selected",
+    "cancel": "Cancel",
+    "noUsersFound": "No users found",
+    "name": "Name",
+    "email": "Email",
+    "status": "Status",
+    "member": "Member",
+    "notMember": "Not member"
+  },
+  "projectDetail": {
+    "members": "Members"
+  },
+  "copyright": "Copyright © 2025 The Rolling Board. All rights reserved."
+}
